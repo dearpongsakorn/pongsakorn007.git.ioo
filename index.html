@@ -4,204 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>วันกีฬาแห่งชาติ</title>
-    <style>
-        /* รีเซ็ตค่าเบื้องต้น */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Prompt', sans-serif;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-
-        header {
-            background-color: #1a73e8;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            letter-spacing: 2px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        nav ul li {
-            display: inline;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #ff9800;
-        }
-
-        .banner {
-            background: url('https://source.unsplash.com/1600x900/?sports') no-repeat center center/cover;
-            height: 70vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            position: relative;
-            text-align: center;
-        }
-
-        .banner::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-
-        .banner h2 {
-            font-size: 3.5rem;
-            z-index: 1;
-            margin-bottom: 20px;
-        }
-
-        .banner p {
-            font-size: 1.5rem;
-            z-index: 1;
-        }
-
-        .banner .btn {
-            padding: 12px 25px;
-            background-color: #ff9800;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            margin-top: 20px;
-            z-index: 1;
-            transition: background-color 0.3s;
-        }
-
-        .banner .btn:hover {
-            background-color: #e67e22;
-        }
-
-        .about, .sports-list {
-            padding: 50px 20px;
-            background-color: white;
-            margin: 20px 0;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .about h2, .sports-list h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #1a73e8;
-        }
-
-        .about p {
-            font-size: 1.2rem;
-            color: #555;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .sports-list ul {
-            list-style: none;
-            font-size: 1.5rem;
-        }
-
-        .sports-list ul li {
-            margin: 10px 0;
-        }
-
-        .sports-list ul li::before {
-            content: '• ';
-            color: #ff9800;
-            font-weight: bold;
-            margin-right: 8px;
-        }
-
-        footer {
-            background-color: #1a73e8;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 1rem;
-        }
-
-        footer p a {
-            color: #ff9800;
-            text-decoration: none;
-        }
-
-        footer p a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css"> <!-- เชื่อมโยงกับไฟล์ CSS -->
 </head>
 <body>
-
     <header>
         <h1>วันกีฬาแห่งชาติ</h1>
         <nav>
             <ul>
-                <li><a href="#home">หน้าแรก</a></li>
                 <li><a href="#about">เกี่ยวกับ</a></li>
-                <li><a href="#sports">กีฬายอดนิยม</a></li>
-                <li><a href="#contact">ติดต่อ</a></li>
+                <li><a href="#events">กิจกรรม</a></li>
+                <li><a href="#contact">ติดต่อเรา</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home" class="banner">
-        <div>
-            <h2>ร่วมฉลองและสนับสนุนการกีฬาไทย</h2>
-            <p>วันที่ 16 ธันวาคม ของทุกปี</p>
-            <a href="#about" class="btn">เรียนรู้เพิ่มเติม</a>
-        </div>
-    </section>
+    <main>
+        <section id="about">
+            <h2>เกี่ยวกับวันกีฬาแห่งชาติ</h2>
+            <p>วันกีฬาแห่งชาติเป็นวันที่จัดขึ้นเพื่อส่งเสริมการกีฬาและสุขภาพของประชาชน...</p>
+        </section>
 
-    <section id="about" class="about">
-        <h2>เกี่ยวกับวันกีฬาแห่งชาติ</h2>
-        <p>วันกีฬาแห่งชาติเป็นวันสำคัญที่ใช้เพื่อเฉลิมฉลองความสำเร็จทางการกีฬา และเพื่อส่งเสริมให้ประชาชนสนใจและตระหนักถึงประโยชน์ของการกีฬา การจัดงานในวันนี้รวมถึงกิจกรรมต่างๆ ที่เกี่ยวกับการกีฬาเพื่อสร้างความสามัคคีและความเป็นน้ำหนึ่งใจเดียวกันในสังคม</p>
-    </section>
+        <section id="events">
+            <h2>กิจกรรมในวันกีฬาแห่งชาติ</h2>
+            <article>
+                <h3>การแข่งขันกีฬา</h3>
+                <p>การแข่งขันกีฬาต่างๆ เช่น ฟุตบอล บาสเกตบอล...</p>
+            </article>
+            <article>
+                <h3>กิจกรรมเพื่อสุขภาพ</h3>
+                <p>การออกกำลังกายเชิงสร้างสรรค์ เช่น วิ่งมาราธอน...</p>
+            </article>
+        </section>
 
-    <section id="sports" class="sports-list">
-        <h2>กีฬายอดนิยมในประเทศไทย</h2>
-        <ul>
-            <li>⚽ ฟุตบอล</li>
-            <li>🥊 มวยไทย</li>
-            <li>🏸 แบดมินตัน</li>
-            <li>🏐 วอลเลย์บอล</li>
-        </ul>
-    </section>
+        <section id="contact">
+            <h2>ติดต่อเรา</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">ชื่อ:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">อีเมล:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">ข้อความ:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">ส่งข้อความ</button>
+            </form>
+        </section>
+    </main>
 
     <footer>
-        <p>© 2024 วันกีฬาแห่งชาติ | ออกแบบโดย <a href="https://example.com">ทีมพัฒนาเว็บไซต์</a></p>
+        <p>&copy; 2024 วันกีฬาแห่งชาติ | สงวนลิขสิทธิ์</p>
+        <p>ติดตามเราบนโซเชียลมีเดีย: 
+            <a href="#">Facebook</a> | 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </p>
     </footer>
-
 </body>
 </html>
