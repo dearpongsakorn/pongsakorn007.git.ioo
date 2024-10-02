@@ -15,36 +15,36 @@
         body {
             font-family: 'Prompt', sans-serif;
             line-height: 1.6;
-            background-color: #f0f0f0;
+            background-color: #f5f5f5;
             color: #333;
         }
 
         header {
-            background-color: #1976d2;
+            background-color: #1a73e8;
             color: white;
+            padding: 20px 0;
             text-align: center;
-            padding: 20px;
         }
 
-        nav {
-            background-color: #1565c0;
-            padding: 10px 0;
+        header h1 {
+            font-size: 2.5rem;
         }
 
         nav ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
+            list-style: none;
+            padding: 10px 0;
         }
 
         nav ul li {
-            margin: 0 20px;
+            display: inline;
+            margin: 0 15px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
         nav ul li a:hover {
@@ -71,16 +71,14 @@
             background-color: rgba(0, 0, 0, 0.5);
         }
 
-        .banner h2, .banner p, .banner a {
-            z-index: 1;
-        }
-
         .banner h2 {
             font-size: 3rem;
+            z-index: 1;
         }
 
         .banner p {
             font-size: 1.5rem;
+            z-index: 1;
         }
 
         .banner .btn {
@@ -91,76 +89,54 @@
             font-weight: bold;
             border-radius: 5px;
             margin-top: 15px;
+            z-index: 1;
         }
 
         .banner .btn:hover {
             background-color: #e67e22;
         }
 
-        .container {
-            padding: 40px 20px;
+        .about, .sports-list {
+            padding: 50px 20px;
+            background-color: white;
+            margin: 20px 0;
             text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .container h2 {
+        .about h2, .sports-list h2 {
             font-size: 2.5rem;
-            color: #1976d2;
             margin-bottom: 20px;
+            color: #1a73e8;
         }
 
-        .container p {
+        .about p {
             font-size: 1.2rem;
-            color: #666;
+            color: #555;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        .quiz-section {
-            background-color: #ffffff;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .quiz-question {
+        .sports-list ul {
+            list-style: none;
             font-size: 1.5rem;
-            margin-bottom: 10px;
         }
 
-        .quiz-option {
+        .sports-list ul li {
             margin: 10px 0;
         }
 
-        .quiz-option label {
-            font-size: 1.2rem;
-            cursor: pointer;
-        }
-
-        .btn {
-            background-color: #ff9800;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
+        .sports-list ul li::before {
+            content: '• ';
+            color: #ff9800;
             font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background-color: #e67e22;
-        }
-
-        .result {
-            margin-top: 20px;
-            font-size: 1.5rem;
-            color: green;
+            margin-right: 8px;
         }
 
         footer {
-            background-color: #1976d2;
+            background-color: #1a73e8;
             color: white;
-            padding: 20px;
+            padding: 20px 0;
             text-align: center;
         }
 
@@ -168,6 +144,14 @@
             font-size: 1rem;
         }
 
+        footer p a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -178,7 +162,7 @@
             <ul>
                 <li><a href="#home">หน้าแรก</a></li>
                 <li><a href="#about">เกี่ยวกับ</a></li>
-                <li><a href="#quiz">แบบทดสอบ</a></li>
+                <li><a href="#sports">กีฬายอดนิยม</a></li>
                 <li><a href="#contact">ติดต่อ</a></li>
             </ul>
         </nav>
@@ -192,71 +176,23 @@
         </div>
     </section>
 
-    <section id="about" class="container">
+    <section id="about" class="about">
         <h2>เกี่ยวกับวันกีฬาแห่งชาติ</h2>
-        <p>วันกีฬาแห่งชาติเป็นวันสำคัญที่เฉลิมฉลองความสำเร็จทางการกีฬา และส่งเสริมให้ประชาชนมีส่วนร่วมในกิจกรรมการกีฬาเพื่อสุขภาพและความสามัคคีในสังคม.</p>
+        <p>วันกีฬาแห่งชาติเป็นวันสำคัญที่ใช้เพื่อเฉลิมฉลองความสำเร็จทางการกีฬา และเพื่อส่งเสริมให้ประชาชนสนใจและตระหนักถึงประโยชน์ของการกีฬา การจัดงานในวันนี้รวมถึงกิจกรรมต่างๆ ที่เกี่ยวกับการกีฬาเพื่อสร้างความสามัคคีและความเป็นน้ำหนึ่งใจเดียวกันในสังคม</p>
     </section>
 
-    <section id="quiz" class="quiz-section container">
-        <h2>แบบทดสอบวันกีฬา</h2>
-        <div class="quiz-question">
-            1. วันกีฬาแห่งชาติของประเทศไทยตรงกับวันที่ใด?
-        </div>
-        <div class="quiz-option">
-            <input type="radio" id="q1a" name="q1" value="wrong">
-            <label for="q1a">1 มกราคม</label><br>
-            <input type="radio" id="q1b" name="q1" value="wrong">
-            <label for="q1b">12 สิงหาคม</label><br>
-            <input type="radio" id="q1c" name="q1" value="correct">
-            <label for="q1c">16 ธันวาคม</label><br>
-            <input type="radio" id="q1d" name="q1" value="wrong">
-            <label for="q1d">23 ตุลาคม</label>
-        </div>
-
-        <div class="quiz-question">
-            2. กีฬาประเภทใดที่ถือเป็นกีฬาประจำชาติของไทย?
-        </div>
-        <div class="quiz-option">
-            <input type="radio" id="q2a" name="q2" value="wrong">
-            <label for="q2a">ฟุตบอล</label><br>
-            <input type="radio" id="q2b" name="q2" value="correct">
-            <label for="q2b">มวยไทย</label><br>
-            <input type="radio" id="q2c" name="q2" value="wrong">
-            <label for="q2c">แบดมินตัน</label><br>
-            <input type="radio" id="q2d" name="q2" value="wrong">
-            <label for="q2d">วอลเลย์บอล</label>
-        </div>
-
-        <button class="btn" onclick="checkQuiz()">ตรวจสอบคำตอบ</button>
-
-        <div id="result" class="result"></div>
+    <section id="sports" class="sports-list">
+        <h2>กีฬายอดนิยมในประเทศไทย</h2>
+        <ul>
+            <li>ฟุตบอล</li>
+            <li>มวยไทย</li>
+            <li>แบดมินตัน</li>
+            <li>วอลเลย์บอล</li>
+        </ul>
     </section>
-
-    <script>
-        function checkQuiz() {
-            let score = 0;
-
-            const q1 = document.querySelector('input[name="q1"]:checked');
-            const q2 = document.querySelector('input[name="q2"]:checked');
-
-            if (q1 && q1.value === "correct") {
-                score++;
-            }
-            if (q2 && q2.value === "correct") {
-                score++;
-            }
-
-            const resultDiv = document.getElementById("result");
-            if (score === 2) {
-                resultDiv.textContent = "คุณตอบถูกทั้ง 2 ข้อ!";
-            } else {
-                resultDiv.textContent = `คุณตอบถูก ${score} ข้อ จาก 2 ข้อ`;
-            }
-        }
-    </script>
 
     <footer>
-        <p>© 2024 วันกีฬาแห่งชาติ | ออกแบบโดยทีมพัฒนาเว็บไซต์</p>
+        <p>© 2024 วันกีฬาแห่งชาติ | ออกแบบโดย <a href="https://example.com">ทีมพัฒนาเว็บไซต์</a></p>
     </footer>
 
 </body>
