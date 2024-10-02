@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แบบทดสอบวันกีฬาแห่งชาติ</title>
+    <title>ประวัติวันกีฬาแห่งชาติ</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,34 +36,15 @@
             color: #35424a;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            margin-top: 20px;
-        }
-
-        .quiz-question {
-            margin-bottom: 15px;
-        }
-
-        .quiz-option {
-            margin: 5px 0;
-        }
-
-        button {
-            background: #35424a;
-            color: #ffffff;
-            padding: 10px;
-            border: none;
+        .event-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
             border-radius: 5px;
-            cursor: pointer;
+            margin-top: 10px;
         }
 
-        button:hover {
-            background: #2c3e50;
-        }
-
-        .back-link {
+        .test-link {
             display: inline-block;
             margin-top: 15px;
             padding: 10px 15px;
@@ -73,7 +54,7 @@
             text-decoration: none;
         }
 
-        .back-link:hover {
+        .test-link:hover {
             background: #2c3e50;
         }
 
@@ -87,40 +68,20 @@
 </head>
 <body>
     <header>
-        <h1>แบบทดสอบวันกีฬาแห่งชาติ</h1>
+        <h1>ประวัติวันกีฬาแห่งชาติ</h1>
     </header>
 
     <main>
-        <section id="quiz">
-            <h2>แบบทดสอบความรู้เกี่ยวกับวันกีฬาแห่งชาติ</h2>
-            <form id="quiz-form">
-                <div class="quiz-question">
-                    <p>1. วันกีฬาแห่งชาติจัดขึ้นครั้งแรกในปีใด?</p>
-                    <div class="quiz-option">
-                        <input type="radio" id="q1a" name="q1" value="พ.ศ. 2507" required>
-                        <label for="q1a">พ.ศ. 2507</label>
-                    </div>
-                    <div class="quiz-option">
-                        <input type="radio" id="q1b" name="q1" value="พ.ศ. 2525">
-                        <label for="q1b">พ.ศ. 2525</label>
-                    </div>
-                    <div class="quiz-option">
-                        <input type="radio" id="q1c" name="q1" value="พ.ศ. 2540">
-                        <label for="q1c">พ.ศ. 2540</label>
-                    </div>
-                </div>
-
-                <!-- คำถามอื่น ๆ -->
-
-                <button type="submit">ส่งแบบทดสอบ</button>
-            </form>
-
-            <a href="index.html" class="back-link">กลับไปหน้าประวัติ</a>
+        <section id="history">
+            <h2>ประวัติความเป็นมาของวันกีฬาแห่งชาติ</h2>
+            <p>วันกีฬาแห่งชาติถูกจัดขึ้นครั้งแรกในปี พ.ศ. 2507 โดยมีจุดมุ่งหมายเพื่อรำลึกถึงความสำเร็จของนักกีฬาไทยในระดับชาติและนานาชาติ นอกจากนี้ยังเป็นการส่งเสริมการเล่นกีฬาและการออกกำลังกายให้แก่ประชาชนทั่วประเทศ เพื่อส่งเสริมสุขภาพและความเป็นสามัคคีในชุมชน</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Flag_of_Thailand_National_Games.jpg/220px-Flag_of_Thailand_National_Games.jpg" alt="เกี่ยวกับวันกีฬาแห่งชาติ" class="event-image">
+            <a href="quiz.html" class="test-link">ไปที่แบบทดสอบ</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 แบบทดสอบวันกีฬาแห่งชาติ | สงวนลิขสิทธิ์</p>
+        <p>&copy; 2024 วันกีฬาแห่งชาติ | สงวนลิขสิทธิ์</p>
     </footer>
 </body>
 </html>
