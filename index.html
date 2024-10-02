@@ -51,54 +51,6 @@
             text-decoration: underline;
         }
 
-        .banner {
-            background: url('https://source.unsplash.com/1600x900/?sports') no-repeat center center/cover;
-            height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            color: white;
-        }
-
-        .banner::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .banner-text {
-            z-index: 1;
-            text-align: center;
-        }
-
-        .banner-text h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
-
-        .banner-text p {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            background-color: #ff9800;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-        }
-
-        .btn:hover {
-            background-color: #e67e22;
-        }
-
         .container {
             padding: 40px 20px;
             text-align: center;
@@ -117,37 +69,48 @@
             margin: 0 auto;
         }
 
-        .image-gallery {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .image-gallery img {
-            width: 30%;
-            height: auto;
+        .quiz-section {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px 0;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
         }
 
-        .image-gallery img:hover {
-            transform: scale(1.05);
+        .quiz-question {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
 
-        footer {
-            background-color: #1976d2;
+        .quiz-option {
+            margin: 10px 0;
+        }
+
+        .quiz-option label {
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .btn {
+            background-color: #ff9800;
             color: white;
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 40px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
-        footer p {
-            font-size: 1rem;
+        .btn:hover {
+            background-color: #e67e22;
         }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: green;
+        }
+
     </style>
 </head>
 <body>
@@ -161,37 +124,73 @@
             <li><a href="#home">หน้าแรก</a></li>
             <li><a href="#about">เกี่ยวกับ</a></li>
             <li><a href="#sports">กีฬายอดนิยม</a></li>
-            <li><a href="#gallery">แกลเลอรี่</a></li>
+            <li><a href="#quiz">แบบทดสอบ</a></li>
             <li><a href="#contact">ติดต่อ</a></li>
         </ul>
     </nav>
-
-    <section id="home" class="banner">
-        <div class="banner-text">
-            <h1>ร่วมฉลองและสนับสนุนการกีฬาไทย</h1>
-            <p>วันที่ 16 ธันวาคม ของทุกปี</p>
-            <a href="#about" class="btn">เรียนรู้เพิ่มเติม</a>
-        </div>
-    </section>
 
     <section id="about" class="container">
         <h2>เกี่ยวกับวันกีฬาแห่งชาติ</h2>
         <p>วันกีฬาแห่งชาติเป็นวันสำคัญที่เฉลิมฉลองความสำเร็จทางการกีฬา และส่งเสริมให้ประชาชนมีส่วนร่วมในกิจกรรมการกีฬาเพื่อสุขภาพและความสามัคคีในสังคม.</p>
     </section>
 
-    <section id="sports" class="container">
-        <h2>กีฬายอดนิยมในประเทศไทย</h2>
-        <p>กีฬาที่เป็นที่นิยมและมีความสำคัญในประเทศไทย เช่น ฟุตบอล มวยไทย และแบดมินตัน เป็นต้น.</p>
+    <section id="quiz" class="quiz-section container">
+        <h2>แบบทดสอบวันกีฬา</h2>
+        <div class="quiz-question">
+            1. วันกีฬาแห่งชาติของประเทศไทยตรงกับวันที่ใด?
+        </div>
+        <div class="quiz-option">
+            <input type="radio" id="q1a" name="q1" value="wrong">
+            <label for="q1a">1 มกราคม</label><br>
+            <input type="radio" id="q1b" name="q1" value="wrong">
+            <label for="q1b">12 สิงหาคม</label><br>
+            <input type="radio" id="q1c" name="q1" value="correct">
+            <label for="q1c">16 ธันวาคม</label><br>
+            <input type="radio" id="q1d" name="q1" value="wrong">
+            <label for="q1d">23 ตุลาคม</label>
+        </div>
+
+        <div class="quiz-question">
+            2. กีฬาประเภทใดที่ถือเป็นกีฬาประจำชาติของไทย?
+        </div>
+        <div class="quiz-option">
+            <input type="radio" id="q2a" name="q2" value="wrong">
+            <label for="q2a">ฟุตบอล</label><br>
+            <input type="radio" id="q2b" name="q2" value="correct">
+            <label for="q2b">มวยไทย</label><br>
+            <input type="radio" id="q2c" name="q2" value="wrong">
+            <label for="q2c">แบดมินตัน</label><br>
+            <input type="radio" id="q2d" name="q2" value="wrong">
+            <label for="q2d">วอลเลย์บอล</label>
+        </div>
+
+        <button class="btn" onclick="checkQuiz()">ตรวจสอบคำตอบ</button>
+
+        <div id="result" class="result"></div>
     </section>
 
-    <section id="gallery" class="container">
-        <h2>แกลเลอรี่</h2>
-        <div class="image-gallery">
-            <img src="https://source.unsplash.com/600x400/?football" alt="ฟุตบอล">
-            <img src="https://source.unsplash.com/600x400/?muay-thai" alt="มวยไทย">
-            <img src="https://source.unsplash.com/600x400/?badminton" alt="แบดมินตัน">
-        </div>
-    </section>
+    <script>
+        function checkQuiz() {
+            let score = 0;
+
+            const q1 = document.querySelector('input[name="q1"]:checked');
+            const q2 = document.querySelector('input[name="q2"]:checked');
+
+            if (q1 && q1.value === "correct") {
+                score++;
+            }
+            if (q2 && q2.value === "correct") {
+                score++;
+            }
+
+            const resultDiv = document.getElementById("result");
+            if (score === 2) {
+                resultDiv.textContent = "คุณตอบถูกทั้ง 2 ข้อ!";
+            } else {
+                resultDiv.textContent = `คุณตอบถูก ${score} ข้อ จาก 2 ข้อ`;
+            }
+        }
+    </script>
 
     <footer>
         <p>© 2024 วันกีฬาแห่งชาติ | ออกแบบโดยทีมพัฒนาเว็บไซต์</p>
