@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>วันกีฬาแห่งชาติ</title>
+    <title>วันกีฬาแห่งชาติ และ แบบทดสอบ</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -114,6 +114,18 @@
         .test-link:hover {
             background: #2c3e50;
         }
+
+        .quiz {
+            margin-top: 30px;
+        }
+
+        .quiz-question {
+            margin-bottom: 15px;
+        }
+
+        .quiz-option {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
@@ -124,7 +136,6 @@
                 <li><a href="#about">เกี่ยวกับ</a></li>
                 <li><a href="#events">กิจกรรม</a></li>
                 <li><a href="#contact">ติดต่อเรา</a></li>
-                <li><a href="test.html" class="test-link">ไปยังแบบทดสอบ</a></li> <!-- ลิงก์ไปยังหน้าแบบทดสอบ -->
             </ul>
         </nav>
     </header>
@@ -133,7 +144,7 @@
         <section id="about">
             <h2>เกี่ยวกับวันกีฬาแห่งชาติ</h2>
             <p>วันกีฬาแห่งชาติเป็นวันที่จัดขึ้นเพื่อส่งเสริมการกีฬาและสุขภาพของประชาชน โดยมีการจัดกิจกรรมกีฬาและการแข่งขันต่างๆ เพื่อสร้างความสนุกสนานและส่งเสริมการออกกำลังกาย</p>
-            <img src="about-image.jpg" alt="เกี่ยวกับวันกีฬาแห่งชาติ" class="event-image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Flag_of_Thailand_National_Games.jpg/220px-Flag_of_Thailand_National_Games.jpg" alt="เกี่ยวกับวันกีฬาแห่งชาติ" class="event-image">
         </section>
 
         <section id="events">
@@ -163,6 +174,45 @@
                 <textarea id="message" name="message" required></textarea>
 
                 <button type="submit">ส่งข้อความ</button>
+            </form>
+        </section>
+
+        <section class="quiz">
+            <h2>แบบทดสอบ</h2>
+            <form id="quiz-form">
+                <div class="quiz-question">
+                    <p>1. วันกีฬาแห่งชาติจัดขึ้นเพื่ออะไร?</p>
+                    <div class="quiz-option">
+                        <input type="radio" id="q1a" name="q1" value="ส่งเสริมการกีฬา" required>
+                        <label for="q1a">ส่งเสริมการกีฬา</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" id="q1b" name="q1" value="การศึกษา">
+                        <label for="q1b">การศึกษา</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" id="q1c" name="q1" value="การท่องเที่ยว">
+                        <label for="q1c">การท่องเที่ยว</label>
+                    </div>
+                </div>
+
+                <div class="quiz-question">
+                    <p>2. กิจกรรมใดที่จัดในวันกีฬาแห่งชาติ?</p>
+                    <div class="quiz-option">
+                        <input type="radio" id="q2a" name="q2" value="วิ่งมาราธอน" required>
+                        <label for="q2a">วิ่งมาราธอน</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" id="q2b" name="q2" value="ประกวดร้องเพลง">
+                        <label for="q2b">ประกวดร้องเพลง</label>
+                    </div>
+                    <div class="quiz-option">
+                        <input type="radio" id="q2c" name="q2" value="แข่งขันบาสเกตบอล">
+                        <label for="q2c">แข่งขันบาสเกตบอล</label>
+                    </div>
+                </div>
+
+                <button type="submit">ส่งแบบทดสอบ</button>
             </form>
         </section>
     </main>
