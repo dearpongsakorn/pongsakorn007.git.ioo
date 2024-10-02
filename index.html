@@ -93,6 +93,27 @@
             color: #ffffff;
             position: relative;
         }
+
+        .event-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .test-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: #35424a;
+            color: #ffffff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .test-link:hover {
+            background: #2c3e50;
+        }
     </style>
 </head>
 <body>
@@ -103,6 +124,7 @@
                 <li><a href="#about">เกี่ยวกับ</a></li>
                 <li><a href="#events">กิจกรรม</a></li>
                 <li><a href="#contact">ติดต่อเรา</a></li>
+                <li><a href="test.html" class="test-link">ไปยังแบบทดสอบ</a></li> <!-- ลิงก์ไปยังหน้าแบบทดสอบ -->
             </ul>
         </nav>
     </header>
@@ -111,6 +133,7 @@
         <section id="about">
             <h2>เกี่ยวกับวันกีฬาแห่งชาติ</h2>
             <p>วันกีฬาแห่งชาติเป็นวันที่จัดขึ้นเพื่อส่งเสริมการกีฬาและสุขภาพของประชาชน โดยมีการจัดกิจกรรมกีฬาและการแข่งขันต่างๆ เพื่อสร้างความสนุกสนานและส่งเสริมการออกกำลังกาย</p>
+            <img src="about-image.jpg" alt="เกี่ยวกับวันกีฬาแห่งชาติ" class="event-image">
         </section>
 
         <section id="events">
@@ -118,10 +141,12 @@
             <article>
                 <h3>การแข่งขันกีฬา</h3>
                 <p>การแข่งขันกีฬาต่างๆ เช่น ฟุตบอล บาสเกตบอล และกีฬาพื้นบ้าน เพื่อส่งเสริมการมีส่วนร่วมและความสามัคคีในชุมชน</p>
+                <img src="sports-competition.jpg" alt="การแข่งขันกีฬา" class="event-image">
             </article>
             <article>
                 <h3>กิจกรรมเพื่อสุขภาพ</h3>
                 <p>การออกกำลังกายเชิงสร้างสรรค์ เช่น วิ่งมาราธอน ปั่นจักรยาน และการฝึกซ้อมในกลุ่ม เพื่อสร้างแรงบันดาลใจในการดูแลสุขภาพ</p>
+                <img src="health-activity.jpg" alt="กิจกรรมเพื่อสุขภาพ" class="event-image">
             </article>
         </section>
 
